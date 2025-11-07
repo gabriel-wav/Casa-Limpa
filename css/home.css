@@ -1,4 +1,4 @@
-/* Reset básico e seguro */
+/* RESET BÁSICO */
 * {
   margin: 0;
   padding: 0;
@@ -27,52 +27,112 @@ ul, ol {
   list-style: none;
 }
 
-/* Fim do Reset */
+/* MOBILE - FIRST */
+#cabecalho {
+    display: flex;
+    flex-direction: column; /* mobile empilha tudo */
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem 1rem;
+    background-color: #31B26A;
+    color: #fff;
+}
 
-body header a img {
-    height: 100px;
-    width: 150px;
-    border: 1px solid #fff;
+/* Logo */
+#cabecalho .left img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #fff;
     border-radius: 10px;
-    margin-left: 20px;
 }
 
-body header a img:hover {
-    border: 1px solid #000;
-    transition: 0.3s;
-    
+/* Menu */
+#cabecalho .center {
+    display: flex;
+    flex-direction: column; /* menu vertical no mobile */
+    gap: 1rem;
+    text-align: center;
 }
 
-nav {
-  display: flex;
-  gap: 30px;
-  padding: 50px;
-  font-size: 20px;
-  margin-right: 20px;
+/* Localização */
+#cabecalho .right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-nav a:hover {
-  color: #000;
-  transition: 0.3s;
-  font-size: 20px;
+#cabecalho .right img {
+    width: 2.5rem;
+    height: auto;
 }
 
-body header #cabecalho {
+
+/* DESKTOP REGULAR */
+@media (min-width: 900px) {
+/* HEADER */
+
+header {
+  width: 100%;
+}
+
+header #cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
   background-color: #31B26A;
+  color: #fff;
+  padding: 0 1.25rem;
 }
 
-body header #cabecalho p {
-  font-size: 20px;
-  margin-right: 20px;
-  
+/* BLOCO ESQUERDO (LOGO) */
+
+header #cabecalho .left {
+  display: flex;
+  align-items: center;
 }
 
-body header a #cabecalho #point {
-    height: 5px;
-    width: 50px;
-    margin-left: 20px;
+header #cabecalho .left a img {
+  height: 6.25rem;
+  width: 100%;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+header #cabecalho .left a img:hover {
+  border: 2px solid #000;
+  transition: 0.3s;
+}
+
+/* MENU CENTRAL */
+
+header #cabecalho .center {
+  display: flex;
+  justify-content: center;
+  gap: 1.875rem;
+  font-size: 1.25rem;
+  padding: 3.125rem 0;
+}
+
+header #cabecalho .center a:hover {
+  color: #000;
+  transition: 0.3s;
+}
+
+/* BLOCO DIREITO (LOCALIZAÇÃO) */
+
+header #cabecalho .right {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+header #cabecalho .right p {
+  font-size: 1.25rem;
+}
+
+header #cabecalho .right #point {
+  height: 1.875rem;
+  width: 15%;
+}
+
 }
