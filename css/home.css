@@ -30,7 +30,7 @@ ul, ol {
 /* MOBILE - FIRST */
 #cabecalho {
     display: flex;
-    flex-direction: column; /* mobile empilha tudo */
+    flex-direction: column;
     align-items: center;
     gap: 1.25rem;
     padding: 1.5rem 1rem;
@@ -38,7 +38,6 @@ ul, ol {
     color: #fff;
 }
 
-/* Logo */
 #cabecalho .left img {
     width: 100%;
     height: auto;
@@ -46,15 +45,13 @@ ul, ol {
     border-radius: 10px;
 }
 
-/* Menu */
 #cabecalho .center {
     display: flex;
-    flex-direction: column; /* menu vertical no mobile */
+    flex-direction: column;
     gap: 1rem;
     text-align: center;
 }
 
-/* Localização */
 #cabecalho .right {
     display: flex;
     align-items: center;
@@ -66,73 +63,518 @@ ul, ol {
     height: auto;
 }
 
+/* ESTILOS GERAIS DO BODY E MAIN */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+}
 
-/* DESKTOP REGULAR */
+main {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+/* ÍCONE FLUTUANTE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    width: 3.75rem;
+    height: 3.75rem;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1.875rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-float img {
+    width: 2.2rem;
+    height: auto;
+}
+
+/* SEÇÃO HERO */
+main .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../file/img/bannerlimpeza.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+main .hero .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main .hero .hero-content h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+main .hero .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+main .hero .hero-content .cta-button {
+    background-color: #31B26A;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+main .hero .hero-content .cta-button:hover {
+    background-color: #2a9a5a;
+}
+
+main .hero .hero-content .social-proof {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+/* SEÇÃO TIPOS DE SERVIÇOS */
+main .services-types {
+    padding: 3rem 1.5rem;
+    background-color: #f5f5f5;
+}
+
+main .services-types .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main .services-types .card {
+    background: #8FD5B0;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+main .services-types .card img {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover; 
+}
+
+main .services-types .card .card-content {
+    background-color: #8FD5B0;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+main .services-types .card .card-content h3 {
+    font-size: 1.4rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+main .services-types .card .card-content p {
+    font-size: 0.95rem;
+    color: #222;
+}
+
+/* SEÇÃO SOBRE MIM */
+main .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+    background-color: #31B26A;
+    color: #fff;
+}
+
+main .about-me img {
+    width: 22.5rem;
+    max-width: 90%; 
+    height: auto; 
+    border-radius: 10%;
+    object-fit: cover;
+    border: 5px solid #fff;
+}
+
+main .about-me .about-content {
+    text-align: center;
+}
+
+main .about-me .about-content h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+main .about-me .about-content p {
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    color: #fff;
+}
+
+main .about-me .stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main .about-me .stat-item {
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #fff;
+}
+
+main .about-me .stat-item span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* SEÇÃO POR QUE ESCOLHER */
+main .why-us {
+    padding: 3rem 1.5rem;
+    background-color: #f5f5f5;
+}
+
+main .why-us .cards-container-why {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+main .why-us .why-card {
+    background-color: #FFE17B;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+main .why-us .why-card h3 {
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+}
+
+/* SEÇÃO FAQ */
+main .faq {
+    padding: 3rem 1.5rem;
+    background-color: #fff;
+}
+
+main .faq .faq-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+main .faq details {
+    background: #F9F9F9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden; 
+}
+
+main .faq summary {
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    color: #000;
+}
+
+main .faq summary::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+
+main .faq details[open] summary::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+main .faq details p {
+    background: #fff;
+    padding: 1.5rem;
+    border-top: 1px solid #eee;
+    margin-top: 0;
+}
+
+/* RODAPÉ (CORRIGIDO) */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding-top: 3rem;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 0 1.5rem;
+}
+
+footer .footer-left img {
+    width: 10rem;
+    height: auto;
+    margin: 0 auto 1rem auto;
+}
+
+
+footer .footer-center p {
+    margin-bottom: 0.5rem;
+    line-height: 1.7; 
+    font-size: 0.95rem; 
+    color: #f0f0f0; 
+}
+
+footer .footer-right nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+footer .footer-right nav a {
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+footer .footer-right nav a:hover {
+    text-decoration: underline;
+    color: #31B26A;
+}
+
+footer .footer-location-bar {
+    background-color: #31B26A;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    margin-top: 2rem;
+    font-weight: 500;
+}
+
+footer .footer-location-bar img {
+    width: 1.2rem;
+    height: auto;
+}
+
+footer .footer-bottom {
+    background-color: #222;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    margin-top: 0;
+}
+
+footer .footer-bottom p {
+    font-size: 0.9rem;
+    opacity: 0.8; 
+}
+
+/* DESKTOP */
 @media (min-width: 900px) {
-/* HEADER */
+    header {
+        width: 100%;
+    }
 
-header {
-  width: 100%;
-}
+    header #cabecalho {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #31B26A;
+        color: #fff;
+        padding: 0 1.25rem;
+    }
 
-header #cabecalho {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #31B26A;
-  color: #fff;
-  padding: 0 1.25rem;
-}
+    header #cabecalho .left {
+        display: flex;
+        align-items: center;
+    }
 
-/* BLOCO ESQUERDO (LOGO) */
+    header #cabecalho .left a img {
+        height: 6.25rem;
+        width: 100%;
+        border: 2px solid #fff;
+        border-radius: 10px;
+    }
 
-header #cabecalho .left {
-  display: flex;
-  align-items: center;
-}
+    header #cabecalho .left a img:hover {
+        border: 2px solid #000;
+        transition: 0.3s;
+    }
 
-header #cabecalho .left a img {
-  height: 6.25rem;
-  width: 100%;
-  border: 2px solid #fff;
-  border-radius: 10px;
-}
+    header #cabecalho .center {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.875rem;
+        font-size: 1.25rem;
+        padding: 3.125rem 0;
+    }
 
-header #cabecalho .left a img:hover {
-  border: 2px solid #000;
-  transition: 0.3s;
-}
+    header #cabecalho .center a:hover {
+        color: #000;
+        transition: 0.3s;
+    }
 
-/* MENU CENTRAL */
+    header #cabecalho .right {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+    }
 
-header #cabecalho .center {
-  display: flex;
-  justify-content: center;
-  gap: 1.875rem;
-  font-size: 1.25rem;
-  padding: 3.125rem 0;
-}
+    header #cabecalho .right p {
+        font-size: 1.25rem;
+    }
 
-header #cabecalho .center a:hover {
-  color: #000;
-  transition: 0.3s;
-}
+    header #cabecalho .right #point {
+        height: 1.875rem;
+        width: 15%;
+    }
 
-/* BLOCO DIREITO (LOCALIZAÇÃO) */
+    main .hero {
+        padding: 6rem 2rem;
+    }
 
-header #cabecalho .right {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-}
+    main .hero .hero-content h1 {
+        font-size: 3rem;
+    }
 
-header #cabecalho .right p {
-  font-size: 1.25rem;
-}
+    main .services-types {
+        padding: 5rem 2rem;
+    }
 
-header #cabecalho .right #point {
-  height: 1.875rem;
-  width: 15%;
-}
+    main .services-types .cards-container {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
+    main .services-types .card {
+        flex: 1;
+        max-width: 350px;
+    }
+
+    main .about-me {
+        flex-direction: row;
+        justify-content: center;
+        gap: 4rem;
+        padding: 5rem 2rem;
+        background-color: #31B26A;
+    }
+
+    /* IMAGEM FLÁVIA (Desktop) */
+    main .about-me img {
+        width: 25rem; 
+        height: 34.375rem;
+        border: 5px solid #fff;
+        border-radius: 10%;
+    }
+
+    main .about-me .about-content {
+        text-align: left;
+        flex-basis: 50%;
+        max-width: 600px;
+        color: #fff;
+    }
+    
+    main .about-me .about-content h2 {
+        color: #fff;
+    }
+    
+    main .about-me .about-content p {
+        color: #fff;
+    }
+    
+    main .about-me .stats {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    main .about-me .stat-item {
+        justify-content: flex-start;
+        color: #fff;
+    }
+    
+    main .about-me .stat-item span {
+        color: #fff;
+    }
+
+    main .why-us {
+        padding: 5rem 2rem;
+    }
+
+    main .why-us .cards-container-why {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    main .why-us .why-card {
+        flex: 1;
+        max-width: 350px;
+        text-align: left;
+    }
+
+    main .faq {
+        padding: 5rem 2rem;
+    }
+
+    /* CORREÇÃO FOOTER (Desktop) */
+    footer .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    footer .footer-left img {
+        margin: 0 0 1rem 0;
+        border: 2px solid #fff;
+        border-radius: 10%;
+    }
+
+    footer .footer-right nav {
+        align-items: flex-start; 
+    }
 }
