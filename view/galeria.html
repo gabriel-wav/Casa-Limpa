@@ -1,11 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Casa Limpa - Galeria</title>
+    <link rel="stylesheet" href="../css/">
 </head>
 <body>
-    
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <!-- LOGO COM IMAGEM - BOTÃO HOME -->
+            <a href="#" class="logo-btn" onclick="scrollToTop()">
+                <img src="images/logo.png" alt="Casa Limpa Logo" class="logo-img">
+                <span>Casa Limpa</span>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Fale conosco</a></li>
+                </ul>
+            </nav>
+            <div class="location">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                São Paulo - Capital
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <h1 class="gallery-title">Galeria</h1>
+        <div class="gallery-grid">
+            <!-- 1 -->
+            <div class="gallery-item">
+                <img src="images/1.jpeg" alt="Piso limpo com mop">
+                <div class="overlay">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="gallery-item">
+                <img src="images/2.jpeg" alt="Roupas acumuladas antes">
+                <div class="overlay">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="gallery-item">
+                <img src="images/3.jpeg" alt="Roupas dobradas em mesa">
+                <div class="overlay">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="gallery-item">
+                <img src="images/4.jpeg" alt="Entrada com plantas">
+                <div class="overlay">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="gallery-item">
+                <img src="images/5.jpeg" alt="Cozinha limpa">
+                <div class="overlay">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="gallery-item">
+                <img src="images/6.jpeg" alt="Escada com corrimão">
+                <div class="overlay">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+            </div>
+            <!-- 7 -->
+            <div class="gallery-item">
+                <img src="images/7.jpeg" alt="Corredor com guarda-corpo">
+                <div class="overlay">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+            </div>
+            <!-- 8 -->
+            <div class="gallery-item">
+                <img src="images/8.jpeg" alt="Quarto arrumado">
+                <div class="overlay">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+            </div>
+            <!-- 9 -->
+            <div class="gallery-item">
+                <img src="images/9.jpeg" alt="Roupas em pilhas altas">
+                <div class="overlay">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+            </div>
+            <!-- 10 -->
+            <div class="gallery-item">
+                <img src="images/10.jpeg" alt="Closet organizado">
+                <div class="overlay">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+            </div>
+            <!-- 11 -->
+            <div class="gallery-item">
+                <img src="images/11.jpeg" alt="Banheiro limpo">
+                <div class="overlay">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+            </div>
+            <!-- 12 -->
+            <div class="gallery-item">
+                <img src="images/12.jpeg" alt="Sala organizada">
+                <div class="overlay">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="contact-info">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Casa Limpa" class="footer-logo-img">
+
+                </div>
+                <p><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57 1.66 0 3 .89 3 2v4c0 1.11-.89 2-2 2C9.94 24 3 17.06 3 8.5c0-1.11.89-2 2-2h4c1.11 0 2 .89 2 2 0 1.24.2 2.45.57 3.57.12.35.03.75-.24 1.02l-2.2 2.2z"/></svg> (11) 98765-4321</p>
+                <p><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> contato@cas043limpa.com.br</p>
+                <p><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Rua das Flores, 123 - São Paulo, SP</p>
+            </div>
+
+            <div class="links">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Depoimentos</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="services">
+                <h3>Serviços</h3>
+                <ul>
+                    <li><a href="#">Limpeza Residencial</a></li>
+                    <li><a href="#">Limpeza Pós-Obra</a></li>
+                    <li><a href="#">Passadoria</a></li>
+                    <li><a href="#">Faxina Completa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2025 Casa Limpa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="modal" id="lightbox">
+        <span class="close">×</span>
+        <img src="" alt="Imagem ampliada" id="lightbox-img">
+    </div>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5511987654321?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20limpeza." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" width="32" height="32">
+            <path fill="#25D366" d="M12.004 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 21.75c-5.376 0-9.75-4.374-9.75-9.75s4.374-9.75 9.75-9.75 9.75 4.374 9.75 9.75-4.374 9.75-9.75 9.75z"/>
+            <path fill="white" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 5.44h-.004c-.673-.012-1.334-.06-1.965-.173-3.707-.739-6.107-3.707-6.283-6.875-.065-1.134.173-2.272.59-3.292.188-.458.469-.88.825-1.235.356-.355.777-.636 1.235-.825.46-.188 1.02-.293 1.574-.293 1.134.065 2.272.173 3.292.59.458.188.88.469 1.235.825.355.356.636.777.825 1.235.188.46.293 1.02.293 1.574 0 1.134-.065 2.272-.173 3.292-.188.458-.469.88-.825 1.235-.356.355-.777.636-1.235.825-.46.188-1.02.293-1.574.293z"/>
+        </svg>
+    </a>
+
+    <script src="js/home.js"></script>
 </body>
 </html>

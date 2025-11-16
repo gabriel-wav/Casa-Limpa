@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --verde_meio_escuro: #31B26A;
+  --verde_claro: #6BDFA2;
+  --cinza_claro: #D9D9D9;
+  --preto_fosco: #3A3A3A;
+  --amarelo_pastoso: #FFD65A;
+}
+
+body {
+    background: #fff;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    background: #31B26A;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0 20px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header .local {
+    color: white;
+}
+
+/* TITULOS */
+section.titulo {
+    background: #6BDFA2;
+    padding: 35px 0;
+    text-align: center;
+}
+
+section.titulo h1 {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* LOGO INSTAGRAM */
+.area-redes {
+    text-align: center;
+    padding: 45px 0;
+}
+
+.area-redes img {
+    width: 80px;
+}
+
+/* CARROSSEL */
+.carrossel-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -50px;
+}
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+.carrossel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  height: 250px;
+  
+}
+
+.carrossel-track img {
+  width: 100%;             
+  flex-shrink: 0;           
+  object-fit: cover;
+  border-radius: 18px;
+  
+}
+
+
+/* BOTÕES */
+.btn-left,.btn-right {
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 25px;
+    background: rgba(0,0,0,0.5);
+    color: #6BDFA2;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-left { left: -55px; }
+.btn-right { right: -55px; }
+
+/* BOLINHAS */
+.bolinhas {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 12px;
+}
+
+.bolinhas div {
+    width: 10px;
+    height: 10px;
+    background: #3A3A3A;
+    border-radius: 50%;
+}
+
+/* FORMULÁRIO */
+#Fundo_Fundo {
+  height: 58rem;
+  width: 47%;
+  margin: auto;
+  margin-top: 30px;
+  background-color: var(--verde_meio_escuro);
+  border-radius: 15px;
+  position: relative;
+}
+
+form {
+  width: 79%;
+  height: 660px;
+  margin: auto;
+  padding: 2rem;
+  background-color: var(--verde_claro);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  position: absolute;
+  right: 9%;
+  bottom: 15%;
+}
+
+.formulario fieldset{
+  border: none;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formulario textarea, 
+.formulario input {
+  border-radius: 8px;
+  padding: 10px;
+  background-color:var(--preto_fosco);
+  color: white;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+  color: rgba(201,199,199,0.8);
+}
+
+.formulario button {
+  background: var(--amarelo_pastoso);
+  color: var(--preto_fosco);
+  border: none;
+  width: 200px;
+  height: 30px;
+  transform: translateX(98%);
+  border-radius: 8px;
+}
+
+/* FORMULÁRIO WHATSAPP */
+.zap-container {
+    width: 70%;
+    margin: 50px auto;
+    background: #3A3A3A;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.zap-container textarea {
+    width: 90%;
+    height: 380px;
+    margin-top: 15px;
+    background: #6BDFA2;
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+}
+
+.zap-container #Mensagem_zap{
+  background-color:var(--verde_claro);
+  padding: 10px;
+  width: 250px;
+  margin: auto;
+  border-radius: 18px;
+}
+
+/* RODAPÉ */
+footer {
+    margin-top: 80px;
+    background: #31B26A;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+}
+
+/* ================================
+   RESPONSIVIDADE DO SITE INTEIRO
+================================ */
+
+/* ----------- 1200px ↓ ----------- */
+@media (max-width: 1200px) {
+
+  header {
+    padding: 20px 30px;
+  }
+
+  nav a {
+    margin: 0 12px;
+  }
+
+  .carrossel img {
+    height: 350px;
+  }
+
+  #Fundo_Fundo {
+    width: 70%;
+  }
+
+  form {
+    width: 90%;
+    right: 5%;
+    bottom: 10%;
+  }
+
+  .zap-container {
+    width: 85%;
+  }
+}
+
+/* ----------- 992px ↓ ----------- */
+@media (max-width: 992px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 5px 10px;
+    font-size: 15px;
+  }
+
+  /* CARROSSEL */
+  .carrossel-wrapper {
+    max-width: 90%;
+    margin-top: -20px;
+  }
+
+  .carrossel img {
+    height: 300px;
+  }
+
+  .btn-left,
+  .btn-right {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    left: -40px;
+    right: -40px;
+  }
+
+  /* FORMULÁRIO */
+  #Fundo_Fundo {
+    width: 85%;
+    height: auto;
+  }
+
+  form {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .formulario button {
+    transform: none;
+    width: 100%;
+  }
+
+  /* WHATSAPP */
+  .zap-container {
+    width: 95%;
+  }
+}
+
+/* ----------- 768px ↓ ----------- */
+/* CELULARES GRANDES */
+@media (max-width: 768px) {
+
+  header img {
+    width: 150px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  /* CARROSSEL MOBILE */
+  .carrossel-wrapper {
+    flex-direction: column;
+  }
+
+  .btn-left,
+  .btn-right {
+    top: unset;
+    bottom: -50px;
+    position: relative;
+    transform: none;
+  }
+
+  .btn-left {
+    left: 0;
+    margin-right: 10px;
+  }
+
+  .btn-right {
+    right: 0;
+    margin-left: 10px;
+  }
+
+  .carrossel img {
+    height: 230px;
+  }
+
+  /* FORM */
+  #Fundo_Fundo {
+    width: 95%;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    font-size: 15px;
+  }
+
+  /* WHATSAPP */
+  .zap-container textarea {
+    height: 230px;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+}
+
+/* ----------- 480px ↓ ----------- */
+/* CELULARES PEQUENOS */
+@media (max-width: 480px) {
+
+  header img {
+    width: 120px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  section.titulo h1 {
+    font-size: 14px;
+  }
+
+  /* CARROSSEL */
+  .carrossel img {
+    height: 180px;
+  }
+
+  .btn-left,
+  .btn-right {
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+  }
+
+  /* FORM */
+  form {
+    padding: 1.2rem;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    font-size: 14px;
+  }
+
+  /* WHATSAPP */
+  .zap-container textarea {
+    height: 180px;
+  }
+
+  footer img {
+    width: 60px;
+  }
+}
