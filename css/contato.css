@@ -1,8 +1,9 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
 }
 
 :root {
@@ -14,122 +15,178 @@
 }
 
 body {
-    background: #fff;
-    overflow-x: hidden;
+  background: #fff;
+  overflow-x: hidden;
 }
 
-/* HEADER */
+#Principal {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: white;
+}
+
+#Principal::before {
+  content: "";
+  position: absolute;
+  width: 1100px;
+  height: 1300px;
+  background-color: var(--verde_meio_escuro);
+  border-radius: 50%;
+  top: -10%;
+  right: -35%;
+  z-index: -1;
+  opacity: 0.85;
+}
+
+#Principal::after {
+  content: "";
+  position: absolute;
+  width: 1500px;
+  height: 1600px;
+  background-color: var(--amarelo_pastoso);
+  border-radius: 50%;
+  top: 15%;
+  left: -40%;
+  z-index: -1;
+  opacity: 0.85;
+}
+
+.logo img {
+  width: 110px;
+}
+
+.circulos::before {
+  content: "";
+  position: absolute;
+  width: 1600px;
+  height: 1600px;
+  background-color: var(--preto_fosco);
+  border-radius: 50%;
+  bottom: -20%;
+  right: -45%;
+  opacity: 0.85;
+  z-index: -1;
+}
+
 header {
-    background: #31B26A;
-    padding: 15px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: #31B26A;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 header nav a {
-    margin: 0 20px;
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
+  margin: 0 20px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 header .local {
-    color: white;
+  color: white;
 }
 
-/* TITULOS */
 section.titulo {
-    background: #6BDFA2;
-    padding: 35px 0;
-    text-align: center;
+  background: #6BDFA2;
+  padding: 35px 0;
+  text-align: center;
 }
 
 section.titulo h1 {
-    color: white;
-    font-size: 18px;
-    font-weight: 700;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
 }
 
-/* LOGO INSTAGRAM */
 .area-redes {
-    text-align: center;
-    padding: 45px 0;
+  text-align: center;
+  padding: 45px 0;
 }
 
 .area-redes img {
-    width: 80px;
+  width: 50px;
+  transition: 0.3s;
 }
 
-/* CARROSSEL */
+.area-redes img:hover {
+  width: 68px;
+}
+
 .carrossel-wrapper {
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-top: -50px;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .carrossel {
   position: relative;
   width: 100%;
   overflow: hidden;
-  
 }
 
 .carrossel-track {
   display: flex;
   transition: transform 0.4s ease;
-  height: 250px;
-  
 }
 
-.carrossel-track img {
-  width: 100%;             
-  flex-shrink: 0;           
+.slide {
+  min-width: 100%;
+  height: 550px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 18px;
-  
+  cursor: pointer;
 }
 
-
-/* BOTÕES */
-.btn-left,.btn-right {
-    border: none;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    font-size: 25px;
-    background: rgba(0,0,0,0.5);
-    color: #6BDFA2;
-    position: absolute;
-    cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%);
+.btn-left,
+.btn-right {
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #6BDFA2;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.btn-left { left: -55px; }
-.btn-right { right: -55px; }
+.btn-left {
+  left: -55px;
+}
 
-/* BOLINHAS */
+.btn-right {
+  right: -55px;
+}
+
 .bolinhas {
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-    gap: 12px;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 12px;
 }
 
 .bolinhas div {
-    width: 10px;
-    height: 10px;
-    background: #3A3A3A;
-    border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #3A3A3A;
+  border-radius: 50%;
 }
 
-/* FORMULÁRIO */
 #Fundo_Fundo {
   height: 58rem;
   width: 47%;
@@ -141,19 +198,19 @@ section.titulo h1 {
 }
 
 form {
-  width: 79%;
-  height: 660px;
+  width: 81%;
+  height: 790px;
   margin: auto;
   padding: 2rem;
   background-color: var(--verde_claro);
   border-radius: 15px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
   position: absolute;
   right: 9%;
-  bottom: 15%;
+  bottom: 7%;
 }
 
-.formulario fieldset{
+.formulario fieldset {
   border: none;
   margin-bottom: 1.5rem;
   display: flex;
@@ -161,17 +218,19 @@ form {
   gap: 0.5rem;
 }
 
-.formulario textarea, 
-.formulario input {
+.formulario input,
+.formulario textarea {
   border-radius: 8px;
   padding: 10px;
-  background-color:var(--preto_fosco);
+  background-color: var(--preto_fosco);
   color: white;
+  border: none;
+  outline: none;
 }
 
 .formulario input::placeholder,
 .formulario textarea::placeholder {
-  color: rgba(201,199,199,0.8);
+  color: rgba(201, 199, 199, 0.8);
 }
 
 .formulario button {
@@ -179,251 +238,291 @@ form {
   color: var(--preto_fosco);
   border: none;
   width: 200px;
-  height: 30px;
+  height: 40px;
   transform: translateX(98%);
   border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-/* FORMULÁRIO WHATSAPP */
+.formulario button:hover {
+  background: #ffed9e;
+}
+
 .zap-container {
-    width: 70%;
-    margin: 50px auto;
-    background: #3A3A3A;
-    padding: 30px;
-    border-radius: 18px;
-    text-align: center;
+  width: 70%;
+  margin: 50px auto;
+  background: #3A3A3A;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
 }
 
-.zap-container textarea {
-    width: 90%;
-    height: 380px;
-    margin-top: 15px;
-    background: #6BDFA2;
-    border-radius: 10px;
-    border: none;
-    padding: 15px;
-}
-
-.zap-container #Mensagem_zap{
-  background-color:var(--verde_claro);
+#Mensagem_zap {
+  background-color: var(--verde_claro);
   padding: 10px;
   width: 250px;
   margin: auto;
   border-radius: 18px;
+  color: #000;
+  font-weight: 600;
 }
 
-/* RODAPÉ */
+#mensagemZap {
+  width: 90%;
+  height: 180px;
+  margin-top: 15px;
+  background: #6BDFA2;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+}
+
+#btnEnviarZap {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+#btnEnviarZap:hover {
+  background: #1DA851;
+  transform: scale(1.05);
+}
+
+#botão_flutuante {
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  bottom: 2%;
+  right: 0.5%;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#botão_flutuante:hover {
+  width: 90px;
+}
+
+#botão_flutuante a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#botão_flutuante img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 footer {
-    margin-top: 80px;
-    background: #31B26A;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 60px;
+  margin-top: 80px;
+  background: #31B26A;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 60px;
+
 }
 
-/* ================================
-   RESPONSIVIDADE DO SITE INTEIRO
-================================ */
+footer img {
+  width: 100px;
+}
 
-/* ----------- 1200px ↓ ----------- */
-@media (max-width: 1200px) {
+/* ====================================
+   RESPONSIVIDADE OTIMIZADA
+==================================== */
 
+/* TABLETS (768px - 1024px) */
+@media (max-width: 1024px) {
   header {
-    padding: 20px 30px;
+    padding: 20px 40px;
   }
 
-  nav a {
-    margin: 0 12px;
+  .carrossel-wrapper {
+    max-width: 90%;
   }
 
-  .carrossel img {
-    height: 350px;
+  .slide {
+    height: 400px;
   }
 
   #Fundo_Fundo {
-    width: 70%;
-  }
-
-  form {
-    width: 90%;
-    right: 5%;
-    bottom: 10%;
-  }
-
-  .zap-container {
-    width: 85%;
+    width: 80%;
   }
 }
 
-/* ----------- 992px ↓ ----------- */
-@media (max-width: 992px) {
-
+/* TABLETS PEQUENOS & CELULARES GRANDES (481px - 768px) */
+@media (max-width: 768px) {
   header {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
     gap: 15px;
   }
 
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  .logo img {
+    width: 90px;
   }
 
-  nav a {
-    margin: 5px 10px;
-    font-size: 15px;
+  header nav a {
+    font-size: 14px;
+    margin: 0 8px;
   }
 
-  /* CARROSSEL */
+  section.titulo h1 {
+    font-size: 18px;
+  }
+
   .carrossel-wrapper {
-    max-width: 90%;
-    margin-top: -20px;
+    padding: 0 10px;
   }
 
-  .carrossel img {
+  .slide {
     height: 300px;
   }
 
   .btn-left,
   .btn-right {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     font-size: 20px;
-    left: -40px;
-    right: -40px;
-  }
-
-  /* FORMULÁRIO */
-  #Fundo_Fundo {
-    width: 85%;
-    height: auto;
-  }
-
-  form {
-    position: static;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .formulario button {
-    transform: none;
-    width: 100%;
-  }
-
-  /* WHATSAPP */
-  .zap-container {
-    width: 95%;
-  }
-}
-
-/* ----------- 768px ↓ ----------- */
-/* CELULARES GRANDES */
-@media (max-width: 768px) {
-
-  header img {
-    width: 150px;
-  }
-
-  nav a {
-    font-size: 14px;
-  }
-
-  /* CARROSSEL MOBILE */
-  .carrossel-wrapper {
-    flex-direction: column;
-  }
-
-  .btn-left,
-  .btn-right {
-    top: unset;
-    bottom: -50px;
-    position: relative;
-    transform: none;
   }
 
   .btn-left {
-    left: 0;
-    margin-right: 10px;
+    left: 5px;
   }
 
   .btn-right {
-    right: 0;
-    margin-left: 10px;
+    right: 5px;
   }
 
-  .carrossel img {
-    height: 230px;
-  }
-
-  /* FORM */
   #Fundo_Fundo {
     width: 95%;
+    margin: 30px auto;
+    padding: 15px;
   }
 
-  .formulario input,
-  .formulario textarea {
-    font-size: 15px;
+  #Fundo {
+    padding: 25px;
   }
 
-  /* WHATSAPP */
-  .zap-container textarea {
-    height: 230px;
+  .zap-container {
+    width: 95%;
+    padding: 25px;
   }
 
-  /* FOOTER */
+  #mensagemZap {
+    height: 140px;
+  }
+
   footer {
     flex-direction: column;
     text-align: center;
-    gap: 25px;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .footer-end {
+    text-align: center;
   }
 }
 
-/* ----------- 480px ↓ ----------- */
-/* CELULARES PEQUENOS */
-@media (max-width: 480px) {
+/* CELULARES PEQUENOS (até 480px) */
+/* ====================================
+   CORREÇÕES RESPONSIVAS - SÓ MOBILE
+==================================== */
+@media (max-width: 768px) {
 
-  header img {
-    width: 120px;
+  /* 1. BOTÃO FLUTUANTE NUNCA ESCONDIDO (mobile) */
+  #botão_flutuante {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    z-index: 9999 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
   }
 
-  nav a {
-    font-size: 12px;
+  #botão_flutuante:hover {
+    transform: scale(1.1) !important;
+    width: 70px !important;
+    height: 70px !important;
   }
 
-  section.titulo h1 {
-    font-size: 14px;
+  #botão_flutuante a,
+  #botão_flutuante img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover !important;
   }
 
-  /* CARROSSEL */
-  .carrossel img {
-    height: 180px;
+  /* ESPAÇO PARA NÃO COBRIR O BOTÃO */
+  #Principal,
+  footer,
+  .zap-container,
+  #Fundo_Fundo {
+    padding-bottom: 90px !important;
   }
 
-  .btn-left,
-  .btn-right {
-    font-size: 18px;
-    width: 30px;
-    height: 30px;
+  /* 2. BOTÃO "ENVIAR" SEMPRE CENTRALIZADO E VISÍVEL */
+  .formulario button {
+    background: var(--amarelo_pastoso) !important;
+    color: var(--preto_fosco) !important;
+    border: none !important;
+    padding: 14px 20px !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 20px auto 0 auto !important;
+    display: block !important;
+    transform: none !important;
+    transition: all 0.3s ease !important;
   }
 
-  /* FORM */
-  form {
-    padding: 1.2rem;
+  .formulario button:hover {
+    background: #ffed9e !important;
+    transform: translateY(-2px) !important;
   }
 
-  .formulario input,
-  .formulario textarea {
-    font-size: 14px;
-  }
+  /* MOBILE PEQUENO (≤ 480px) */
+  @media (max-width: 480px) {
+    #botão_flutuante {
+      width: 55px !important;
+      height: 55px !important;
+      bottom: 15px !important;
+      right: 15px !important;
+    }
 
-  /* WHATSAPP */
-  .zap-container textarea {
-    height: 180px;
-  }
+    .formulario button {
+      padding: 12px !important;
+      font-size: 15px !important;
+    }
 
-  footer img {
-    width: 60px;
+    #Principal,
+    footer,
+    .zap-container,
+    #Fundo_Fundo {
+      padding-bottom: 80px !important;
+    }
   }
 }

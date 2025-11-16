@@ -165,10 +165,12 @@ p {
   .section {
     flex-direction: column !important;
   }
+
   .section .content,
   .section .image {
     padding: 20px;
   }
+
   .servicos h2 {
     font-size: 1.6rem;
   }

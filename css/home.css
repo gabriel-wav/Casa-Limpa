@@ -1,30 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 /* RESET BÁSICO */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+html,
+body {
+    height: 100%;
 }
 
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
-button, input, textarea, select {
-  font: inherit;
+button,
+input,
+textarea,
+select {
+    font: inherit;
 }
 
-ul, ol {
-  list-style: none;
+ul,
+ol {
+    list-style: none;
 }
 
 /* MOBILE - FIRST */
@@ -43,6 +54,12 @@ ul, ol {
     height: auto;
     border: 2px solid #fff;
     border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+#cabecalho .left img:hover {
+    transform: scale(1.05);
+    border-color: #FFE17B;
 }
 
 #cabecalho .center {
@@ -50,6 +67,15 @@ ul, ol {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+}
+
+#cabecalho .center a {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#cabecalho .center a:hover {
+    color: #FFE17B;
+    transform: translateY(-2px);
 }
 
 #cabecalho .right {
@@ -61,6 +87,10 @@ ul, ol {
 #cabecalho .right img {
     width: 2.5rem;
     height: auto;
+}
+
+#cabecalho .right p {
+    white-space: nowrap;
 }
 
 /* ESTILOS GERAIS DO BODY E MAIN */
@@ -100,11 +130,18 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease-out;
 }
 
 .whatsapp-float img {
-    width: 2.2rem;
+    width: 4.5rem;
     height: auto;
+}
+
+.whatsapp-float:hover {
+    background-color: #1EAD56;
+    box-shadow: 2px 2px 12px #1EAD56;
+    transform: scale(1.1) rotate(5deg);
 }
 
 /* SEÇÃO HERO */
@@ -141,11 +178,13 @@ main .hero .hero-content .cta-button {
     font-weight: bold;
     font-size: 1.1rem;
     display: inline-block;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 main .hero .hero-content .cta-button:hover {
-    background-color: #2a9a5a;
+    background-color: #1EAD56;
+    box-shadow: 0 4px 20px rgba(30, 173, 86, 0.5);
+    transform: translateY(-3px);
 }
 
 main .hero .hero-content .social-proof {
@@ -171,13 +210,19 @@ main .services-types .card {
     background: #8FD5B0;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden; 
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main .services-types .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 main .services-types .card img {
     width: 100%;
-    height: 400px; 
-    object-fit: cover; 
+    height: 400px;
+    object-fit: cover;
 }
 
 main .services-types .card .card-content {
@@ -211,11 +256,17 @@ main .about-me {
 
 main .about-me img {
     width: 22.5rem;
-    max-width: 90%; 
-    height: auto; 
+    max-width: 90%;
+    height: auto;
     border-radius: 10%;
     object-fit: cover;
     border: 5px solid #fff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+main .about-me img:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 main .about-me .about-content {
@@ -247,6 +298,11 @@ main .about-me .stat-item {
     justify-content: center;
     gap: 0.5rem;
     color: #fff;
+    transition: transform 0.3s ease;
+}
+
+main .about-me .stat-item:hover {
+    transform: scale(1.1);
 }
 
 main .about-me .stat-item span {
@@ -272,6 +328,13 @@ main .why-us .why-card {
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+main .why-us .why-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #FFD54F;
 }
 
 main .why-us .why-card h3 {
@@ -297,7 +360,13 @@ main .faq details {
     border: 1px solid #eee;
     border-radius: 8px;
     margin-bottom: 1rem;
-    overflow: hidden; 
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+main .faq details:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px);
 }
 
 main .faq summary {
@@ -307,6 +376,11 @@ main .faq summary {
     list-style: none;
     position: relative;
     color: #000;
+    transition: background-color 0.3s ease;
+}
+
+main .faq summary:hover {
+    background-color: #f0f0f0;
 }
 
 main .faq summary::after {
@@ -330,7 +404,7 @@ main .faq details p {
     margin-top: 0;
 }
 
-/* RODAPÉ (CORRIGIDO) */
+/* RODAPÉ */
 footer {
     background-color: #333;
     color: #fff;
@@ -350,14 +424,19 @@ footer .footer-left img {
     width: 10rem;
     height: auto;
     margin: 0 auto 1rem auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+footer .footer-left img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
 
 footer .footer-center p {
     margin-bottom: 0.5rem;
-    line-height: 1.7; 
-    font-size: 0.95rem; 
-    color: #f0f0f0; 
+    line-height: 1.7;
+    font-size: 0.95rem;
+    color: #f0f0f0;
 }
 
 footer .footer-right nav {
@@ -369,12 +448,13 @@ footer .footer-right nav {
 footer .footer-right nav a {
     letter-spacing: 0.5px;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.2s ease;
 }
 
 footer .footer-right nav a:hover {
     text-decoration: underline;
     color: #31B26A;
+    transform: translateX(5px);
 }
 
 footer .footer-location-bar {
@@ -403,7 +483,7 @@ footer .footer-bottom {
 
 footer .footer-bottom p {
     font-size: 0.9rem;
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 /* DESKTOP */
@@ -435,8 +515,8 @@ footer .footer-bottom p {
     }
 
     header #cabecalho .left a img:hover {
-        border: 2px solid #000;
-        transition: 0.3s;
+        border: 2px solid #FFE17B;
+        transition: 0.4s ease;
     }
 
     header #cabecalho .center {
@@ -449,8 +529,8 @@ footer .footer-bottom p {
     }
 
     header #cabecalho .center a:hover {
-        color: #000;
-        transition: 0.3s;
+        color: #FFE17B;
+        transition: 0.3s ease;
     }
 
     header #cabecalho .right {
@@ -461,6 +541,8 @@ footer .footer-bottom p {
 
     header #cabecalho .right p {
         font-size: 1.25rem;
+        white-space: nowrap;
+
     }
 
     header #cabecalho .right #point {
@@ -502,7 +584,7 @@ footer .footer-bottom p {
 
     /* IMAGEM FLÁVIA (Desktop) */
     main .about-me img {
-        width: 25rem; 
+        width: 25rem;
         height: 34.375rem;
         border: 5px solid #fff;
         border-radius: 10%;
@@ -514,15 +596,15 @@ footer .footer-bottom p {
         max-width: 600px;
         color: #fff;
     }
-    
+
     main .about-me .about-content h2 {
         color: #fff;
     }
-    
+
     main .about-me .about-content p {
         color: #fff;
     }
-    
+
     main .about-me .stats {
         flex-direction: row;
         gap: 2rem;
@@ -532,7 +614,7 @@ footer .footer-bottom p {
         justify-content: flex-start;
         color: #fff;
     }
-    
+
     main .about-me .stat-item span {
         color: #fff;
     }
@@ -558,7 +640,7 @@ footer .footer-bottom p {
         padding: 5rem 2rem;
     }
 
-    /* CORREÇÃO FOOTER (Desktop) */
+    /* FOOTER (Desktop) */
     footer .footer-container {
         flex-direction: row;
         justify-content: space-between;
@@ -575,6 +657,37 @@ footer .footer-bottom p {
     }
 
     footer .footer-right nav {
-        align-items: flex-start; 
+        align-items: flex-start;
+    }
+
+    .footer-agrupado {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .footer-center p:first-child {
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        color: #FFD700;
+        font-size: 1.25rem;
+    }
+
+    .footer-center p a {
+        transition: color 0.3s ease;
+    }
+
+    .footer-center p a:hover {
+        color: #31B26A;
+        text-decoration: underline;
+    }
+
+    .footer-center p a {
+        transition: color 0.3s ease;
+    }
+
+    .footer-center p a:hover {
+        color: #31B26A;
+        text-decoration: underline;
     }
 }
