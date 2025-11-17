@@ -103,6 +103,39 @@ body {
     line-height: 1.6;
     background-color: #fff;
     color: #333;
+    background: url('../file/img/anton-y-bjqTUUw2Q-unsplash.jpg')center/cover;
+    background-attachment: fixed;
+}
+
+/* ÍCONE FLUTUANTE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    width: 3.75rem;
+    height: 3.75rem;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1.875rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-out;
+}
+
+.whatsapp-float img {
+    width: 4.5rem;
+    height: auto;
+}
+
+.whatsapp-float:hover {
+    background-color: #1EAD56;
+    box-shadow: 2px 2px 12px #1EAD56;
+    transform: scale(1.1) rotate(5deg);
 }
 
 /* RODAPÉ */
@@ -315,11 +348,13 @@ footer .footer-bottom p {
 
 body {
     background: url('../file/img/anton-y-bjqTUUw2Q-unsplash.jpg')center/cover;
-    backdrop-filter: blur(5px);
     background-attachment: fixed;
-    overflow-x: hidden;
 }
 
+.page-wrapper {
+    backdrop-filter: blur(5px);
+    overflow-x: hidden; /* Isso previne barra de rolagem horizontal */
+}
 
 header nav a:hover {
     color: #FFE17B;
