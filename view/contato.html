@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato - Casa Limpa</title>
+
+  <link rel="stylesheet" href="../css/home.css">
   <link rel="stylesheet" href="../css/contato.css">
 
-  <!-- FONT POPPINS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,7 +16,6 @@
 
 <body>
 
-  <!-- HEADER -->
   <header>
     <div id="cabecalho">
       <div class="left">
@@ -23,14 +23,12 @@
           <img src="../file/img/casalimpalogo.png" alt="Logo Casa Limpa">
         </a>
       </div>
-
       <nav class="center">
         <a href="../home.html">Home</a>
         <a href="../view/galeria.html">Galeria</a>
         <a href="../view/servicos.html">Serviços</a>
         <a href="../view/contato.html">Fale Conosco</a>
       </nav>
-
       <div class="right">
         <img src="../file/img/point.png" id="point" alt="Point Localização">
         <p>São Paulo - Capital</p>
@@ -38,71 +36,84 @@
     </div>
   </header>
 
-  <!-- SEÇÃO 1 – Redes sociais -->
+  <a href="https://wa.me/5511980487555" class="whatsapp-float" target="_blank">
+    <img src="../file/img/whatsapp_icon.svg" alt="Agendar pelo WhatsApp">
+  </a>
+
   <section class="titulo">
     <h1>Redes Sociais</h1>
   </section>
 
   <div class="area-redes">
-    <a href="https://www.instagram.com/"><img class="insta-logo" src="../img/Instagram_logo_2022.svg.png"></a>
+    <a href="https://www.instagram.com/casa_limpaeorganizada/"><img class="insta-logo" src="../file/img/Instagram_logo_2022.png"></a>
   </div>
 
-  <!-- CARROSSEL -->
   <div class="carrossel-wrapper">
-
     <button class="btn-left">&#9664;</button>
-
     <div class="carrossel">
       <div class="carrossel-track">
-        <img src="../img/cdc-VRpjDw3WqqI-unsplash.jpg">
-        <img src="../img/towfiqu-barbhuiya-5m5418Ng6t8-unsplash.jpg">
-        <img src="../img/cdc-VRpjDw3WqqI-unsplash.jpg">
+
+        <div class="slide">
+          <a href="https://www.instagram.com/p/ChYZOqSOZf7/" target="_blank">
+            <img src="../file/img/WhatsApp Image 2025-11-01 at 13.14.05 (1).jpeg" alt="Antes da lavanderia">
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="https://www.instagram.com/p/ChGYXHnuEga/" target="_blank">
+            <img src="../file/img/WhatsApp Image 2025-11-01 at 13.14.05 (2).jpeg" alt="Guarda-roupa com toalhas">
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="https://www.instagram.com/p/ChYaZ09u2pX/" target="_blank">
+            <img src="../file/img/WhatsApp Image 2025-11-01 at 13.14.05.jpeg" alt="Roupas dobradas no armário">
+          </a>
+        </div>
+
       </div>
     </div>
-
     <button class="btn-right">&#9654;</button>
-
   </div>
-
   <div class="bolinhas">
     <div></div>
     <div></div>
     <div></div>
   </div>
 
-  <!-- SEÇÃO 2 – Formulário -->
   <section class="titulo">
-    <h1>Formulário</h1>
+    <h1>Formulário de Contato</h1>
   </section>
 
   <div id="Fundo_Fundo">
     <div id="Fundo">
-      <form action="">
+
+      <form id="formContato" action="https://formspree.io/f/mnnlwake" method="POST">
         <div class="formulario">
           <fieldset>
             <label for="Nome">Nome</label>
-            <input type="text" name="Nome" id="Nome" placeholder="Escreva seu Nome Aqui">
+            <input type="text" name="Nome" id="Nome" placeholder="Escreva seu Nome Aqui" required>
           </fieldset>
 
           <fieldset>
             <label for="Bairro">Bairro</label>
-            <input type="text" name="Bairro" id="Bairro" placeholder="Digite seu Bairro!">
+            <input type="text" name="Bairro" id="Bairro" placeholder="Digite seu Bairro!" required>
           </fieldset>
 
           <fieldset>
             <label for="Telefone">Telefone</label>
-            <input type="number" name="Telefone" id="Telefone" placeholder="Digite seu Número Aqui!">
+            <input type="tel" name="Telefone" id="Telefone" placeholder="(11) 98765-4321" required>
           </fieldset>
 
           <fieldset>
             <legend>Tipo de Limpeza</legend>
-            <label><input type="checkbox" name="CKBresidencial"> Residencial</label>
-            <label><input type="checkbox" name="CKBcomercial"> Comercial</label>
+            <label><input type="checkbox" name="Tipo de Limpeza" value="Residencial"> Residencial</label>
+            <label><input type="checkbox" name="Tipo de Limpeza" value="Comercial"> Comercial</label>
           </fieldset>
 
           <fieldset>
             <label for="Mensagem">Mensagem</label>
-            <textarea name="Mensagem" placeholder="Digite sua mensagem aqui!"></textarea>
+            <textarea name="Mensagem" id="Mensagem" placeholder="Digite sua mensagem aqui!" required></textarea>
           </fieldset>
 
           <button type="submit">Enviar</button>
@@ -110,22 +121,22 @@
       </form>
 
     </div>
-
   </div>
 
-  <!-- SEÇÃO 3 – Mensagem WhatsApp -->
   <section class="titulo">
-    <h1>Formulário</h1>
+    <h1>Mensagem Direta</h1>
   </section>
 
   <div class="zap-container">
     <div id="Mensagem_zap">
       <p>Mensagem direto para zap</p>
     </div>
-    <textarea></textarea>
+
+    <textarea id="mensagemZap" placeholder="Digite sua mensagem aqui..."></textarea>
+
+    <button type="button" id="btnEnviarZap">Enviar no WhatsApp</button>
   </div>
 
-  <!-- RODAPÉ -->
   <footer>
     <div class="footer-container">
       <div class="footer-agrupado">

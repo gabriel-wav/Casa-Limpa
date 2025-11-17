@@ -1,22 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* RESET BÁSICO */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* <-- Vindo do contato.css */
 }
 
+html,
+body {
+    height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* MOBILE - FIRST (Da Home.css) */
+#cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem 1rem;
+    background-color: #31B26A;
+    color: #fff;
+}
+
+#cabecalho .left img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+#cabecalho .left img:hover {
+    transform: scale(1.05);
+    border-color: #FFE17B;
+}
+
+#cabecalho .center {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+#cabecalho .center a {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#cabecalho .center a:hover {
+    color: #FFE17B;
+    transform: translateY(-2px);
+}
+
+#cabecalho .right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#cabecalho .right img {
+    width: 2.5rem;
+    height: auto;
+}
+
+#cabecalho .right p {
+    white-space: nowrap;
+}
+
+/* ESTILOS GERAIS DO BODY E MAIN (Da Home.css) */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    overflow-x: hidden; /* Vindo do contato.css */
+}
+
+main {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+/* ÍCONE FLUTUANTE WHATSAPP (Da Home.css) */
+.whatsapp-float {
+    position: fixed;
+    width: 3.75rem;
+    height: 3.75rem;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1.875rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-out;
+}
+
+.whatsapp-float img {
+    width: 4.5rem;
+    height: auto;
+}
+
+.whatsapp-float:hover {
+    background-color: #1EAD56;
+    box-shadow: 2px 2px 12px #1EAD56;
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* SEÇÕES DA HOME (Não aplicadas aqui, mas não conflitam) */
+/* ... */
+
+/* RODAPÉ (Da Home.css) */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding-top: 3rem;
+    margin-top: 80px; /* Vindo do contato.css */
+}
+
+footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 0 1.5rem;
+}
+
+footer .footer-left img {
+    width: 10rem;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer .footer-left img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+footer .footer-center p {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    color: #f0f0f0;
+}
+
+footer .footer-right nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+footer .footer-right nav a {
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.2s ease;
+}
+
+footer .footer-right nav a:hover {
+    text-decoration: underline;
+    color: #31B26A;
+    transform: translateX(5px);
+}
+
+footer .footer-location-bar {
+    background-color: #31B26A;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    margin-top: 2rem;
+    font-weight: 500;
+}
+
+footer .footer-location-bar img {
+    width: 1.2rem;
+    height: auto;
+}
+
+footer .footer-bottom {
+    background-color: #222;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    margin-top: 0;
+}
+
+footer .footer-bottom p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* DESKTOP (Da Home.css) */
+@media (min-width: 900px) {
+    header {
+        width: 100%;
+    }
+
+    header #cabecalho {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #31B26A;
+        color: #fff;
+        padding: 0 1.25rem;
+    }
+
+    header #cabecalho .left {
+        display: flex;
+        align-items: center;
+    }
+
+    header #cabecalho .left a img {
+        height: 6.25rem;
+        width: 100%;
+        border: 2px solid #fff;
+        border-radius: 10px;
+    }
+
+    header #cabecalho .left a img:hover {
+        border: 2px solid #FFE17B;
+        transition: 0.4s ease;
+    }
+
+    header #cabecalho .center {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.875rem;
+        font-size: 1.25rem;
+        padding: 3.125rem 0;
+    }
+
+    header #cabecalho .center a:hover {
+        color: #FFE17B;
+        transition: 0.3s ease;
+    }
+
+    header #cabecalho .right {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+    }
+
+    header #cabecalho .right p {
+        font-size: 1.25rem;
+        white-space: nowrap;
+
+    }
+
+    header #cabecalho .right #point {
+        height: 1.875rem;
+        width: 15%;
+    }
+
+    /* ... Seções da Home (Desktop) ... */
+
+
+    /* FOOTER (Desktop - Da Home.css) */
+    .footer-agrupado {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem; /* Espaçamento entre logo e infos */
+    }
+
+    footer .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    footer .footer-left img {
+        margin: 0 0 1rem 0;
+        border: 2px solid #fff;
+        border-radius: 10%;
+    }
+
+    footer .footer-right nav {
+        align-items: flex-start;
+    }
+
+    /* ESTILOS DO FOOTER (Slogan e Links - Da Home.css) */
+    .footer-center p:first-child {
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        color: #FFD700;
+        font-size: 1.25rem;
+    }
+
+    .footer-center p a {
+        transition: color 0.3s ease;
+    }
+
+    .footer-center p a:hover {
+        color: #31B26A;
+        text-decoration: underline;
+    }
+}
+
+/* ====================================
+   INÍCIO DO CSS ESPECÍFICO DE CONTATO
+   ==================================== */
 :root {
   --verde_meio_escuro: #31B26A;
   --verde_claro: #6BDFA2;
   --cinza_claro: #D9D9D9;
   --preto_fosco: #3A3A3A;
   --amarelo_pastoso: #FFD65A;
-}
-
-body {
-  background: #fff;
-  overflow-x: hidden;
 }
 
 #Principal {
@@ -26,6 +362,7 @@ body {
   background-color: white;
 }
 
+/* EFEITOS DE FUNDO (CÍRCULOS) */
 #Principal::before {
   content: "";
   position: absolute;
@@ -52,10 +389,6 @@ body {
   opacity: 0.85;
 }
 
-.logo img {
-  width: 110px;
-}
-
 .circulos::before {
   content: "";
   position: absolute;
@@ -69,31 +402,19 @@ body {
   z-index: -1;
 }
 
-header {
-  background: #31B26A;
-  padding: 15px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-
-header nav a {
-  margin: 0 20px;
-  color: white;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-header .local {
-  color: white;
+/* SEÇÃO TÍTULO */
+section.titulo:nth-of-type(1) {
+  background: #6BDFA2;
+  padding: 35px 0;
+  text-align: center;
+  margin-top: 0px;
 }
 
 section.titulo {
   background: #6BDFA2;
   padding: 35px 0;
   text-align: center;
+  margin-top: 40px;
 }
 
 section.titulo h1 {
@@ -102,6 +423,7 @@ section.titulo h1 {
   font-weight: 700;
 }
 
+/* SEÇÃO REDES SOCIAIS */
 .area-redes {
   text-align: center;
   padding: 45px 0;
@@ -110,12 +432,14 @@ section.titulo h1 {
 .area-redes img {
   width: 50px;
   transition: 0.3s;
+  display: inline-block; /* Correção para alinhamento */
 }
 
 .area-redes img:hover {
   width: 68px;
 }
 
+/* CARROSSEL */
 .carrossel-wrapper {
   width: 100%;
   max-width: 1100px;
@@ -187,6 +511,7 @@ section.titulo h1 {
   border-radius: 50%;
 }
 
+/* FORMULÁRIO */
 #Fundo_Fundo {
   height: 58rem;
   width: 47%;
@@ -250,6 +575,7 @@ form {
   background: #ffed9e;
 }
 
+/* WHATSAPP DIRETO (FORMULÁRIO) */
 .zap-container {
   width: 70%;
   margin: 50px auto;
@@ -299,58 +625,12 @@ form {
   transform: scale(1.05);
 }
 
-#botão_flutuante {
-  width: 70px;
-  height: 70px;
-  position: fixed;
-  bottom: 2%;
-  right: 0.5%;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: 0.3s;
-  z-index: 1000;
-}
-
-#botão_flutuante:hover {
-  width: 90px;
-}
-
-#botão_flutuante a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-#botão_flutuante img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-footer {
-  margin-top: 80px;
-  background: #31B26A;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 40px 60px;
-
-}
-
-footer img {
-  width: 100px;
-}
-
 /* ====================================
-   RESPONSIVIDADE OTIMIZADA
+   RESPONSIVIDADE OTIMIZADA (CONTATO)
 ==================================== */
 
 /* TABLETS (768px - 1024px) */
 @media (max-width: 1024px) {
-  header {
-    padding: 20px 40px;
-  }
-
   .carrossel-wrapper {
     max-width: 90%;
   }
@@ -366,22 +646,6 @@ footer img {
 
 /* TABLETS PEQUENOS & CELULARES GRANDES (481px - 768px) */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    gap: 15px;
-  }
-
-  .logo img {
-    width: 90px;
-  }
-
-  header nav a {
-    font-size: 14px;
-    margin: 0 8px;
-  }
-
   section.titulo h1 {
     font-size: 18px;
   }
@@ -427,61 +691,21 @@ footer img {
   #mensagemZap {
     height: 140px;
   }
-
-  footer {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-    gap: 30px;
-  }
-
-  .footer-end {
-    text-align: center;
-  }
 }
 
-/* CELULARES PEQUENOS (até 480px) */
 /* ====================================
-   CORREÇÕES RESPONSIVAS - SÓ MOBILE
+   CORREÇÕES RESPONSIVAS - SÓ MOBILE (CONTATO)
 ==================================== */
 @media (max-width: 768px) {
 
-  /* 1. BOTÃO FLUTUANTE NUNCA ESCONDIDO (mobile) */
-  #botão_flutuante {
-    position: fixed !important;
-    bottom: 20px !important;
-    right: 20px !important;
-    width: 60px !important;
-    height: 60px !important;
-    border-radius: 50% !important;
-    z-index: 9999 !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
-    transition: all 0.3s ease !important;
-  }
-
-  #botão_flutuante:hover {
-    transform: scale(1.1) !important;
-    width: 70px !important;
-    height: 70px !important;
-  }
-
-  #botão_flutuante a,
-  #botão_flutuante img {
-    width: 100% !important;
-    height: 100% !important;
-    display: block !important;
-    object-fit: cover !important;
-  }
-
-  /* ESPAÇO PARA NÃO COBRIR O BOTÃO */
+  /* ESPAÇO PARA NÃO COBRIR O BOTÃO FLUTUANTE */
   #Principal,
-  footer,
   .zap-container,
   #Fundo_Fundo {
     padding-bottom: 90px !important;
   }
 
-  /* 2. BOTÃO "ENVIAR" SEMPRE CENTRALIZADO E VISÍVEL */
+  /* BOTÃO "ENVIAR" SEMPRE CENTRALIZADO E VISÍVEL */
   .formulario button {
     background: var(--amarelo_pastoso) !important;
     color: var(--preto_fosco) !important;
@@ -506,20 +730,12 @@ footer img {
 
   /* MOBILE PEQUENO (≤ 480px) */
   @media (max-width: 480px) {
-    #botão_flutuante {
-      width: 55px !important;
-      height: 55px !important;
-      bottom: 15px !important;
-      right: 15px !important;
-    }
-
     .formulario button {
       padding: 12px !important;
       font-size: 15px !important;
     }
 
     #Principal,
-    footer,
     .zap-container,
     #Fundo_Fundo {
       padding-bottom: 80px !important;
