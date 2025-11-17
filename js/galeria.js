@@ -1,92 +1,95 @@
-// Voltar ao topo
+// galeria.js — substitua o arquivo inteiro por este
+// Voltar ao topo (se usar)
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Lightbox
 document.addEventListener('DOMContentLoaded', function () {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.close');
-    
-    // 1. Seleciona as setas que você adicionou no HTML
+
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
 
-    // 2. Pega todas as imagens da galeria
-    const galleryImages = document.querySelectorAll('.gallery-item img');
-    const imagesSrc = []; // Array para guardar os links (src)
-    
-    // 3. Salva o 'src' de cada imagem no array
-    galleryImages.forEach(img => {
-        imagesSrc.push(img.src);
+    // Seleciona os itens inteiros (assim o overlay não bloqueia)
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const imagesSrc = [];
+
+    galleryItems.forEach(item => {
+        const img = item.querySelector('img');
+        if (img && img.src) imagesSrc.push(img.src);
     });
 
-    let currentIndex = 0; // Guarda o índice da imagem atual
+    let currentIndex = 0;
 
-    // 4. Função para ABRIR e MOSTRAR a imagem
     function showImage(index) {
-        // Validação para o loop da galeria
+        if (imagesSrc.length === 0) return;
         if (index >= imagesSrc.length) {
-            currentIndex = 0; // Volta para a primeira
+            currentIndex = 0;
         } else if (index < 0) {
-            currentIndex = imagesSrc.length - 1; // Vai para a última
+            currentIndex = imagesSrc.length - 1;
         } else {
             currentIndex = index;
         }
-        
+
         lightboxImg.src = imagesSrc[currentIndex];
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
 
-    // 5. Adiciona o clique em cada imagem da galeria
-    // É ISSO QUE NÃO ESTAVA FUNCIONANDO POR CAUSA DO ERRO
-    galleryImages.forEach((img, index) => {
-        img.addEventListener('click', function () {
+    // abre ao clicar no item todo (overlay inclusive)
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', function (e) {
+            // evita que cliques em links internos (se houver) façam navegação
+            e.preventDefault?.();
             showImage(index);
         });
     });
 
-    // 6. Funções para fechar o lightbox
     function closeModal() {
         lightbox.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+        // limpa src (opcional)
+        lightboxImg.src = '';
     }
 
-    closeBtn.addEventListener('click', closeModal);
+    // segurança: checar existência antes de usar
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            // se clicar no fundo (fora da imagem e das setas), fecha
+            if (e.target === lightbox) {
+                closeModal();
+            }
+        });
+    }
 
-    lightbox.addEventListener('click', (e) => {
-        // Fecha se clicar no fundo escuro (fora da imagem)
-        if (e.target === lightbox) {
-            closeModal();
-        }
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showImage(currentIndex - 1);
+        });
+    } else {
+        console.warn('prevBtn não encontrado');
+    }
 
-    // 7. Funções das SETAS e TECLADO
-    prevBtn.addEventListener('click', () => {
-        showImage(currentIndex - 1);
-    });
-
-    nextBtn.addEventListener('click', () => {
-        showImage(currentIndex + 1);
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showImage(currentIndex + 1);
+        });
+    } else {
+        console.warn('nextBtn não encontrado');
+    }
 
     document.addEventListener('keydown', (e) => {
-        // Só funciona se o lightbox estiver ativo
-        if (!lightbox.classList.contains('active')) {
-            return;
-        }
-        
-        if (e.key === 'Escape') {
-            closeModal();
-        }
-        if (e.key === 'ArrowLeft') {
-            showImage(currentIndex - 1);
-        }
-        if (e.key === 'ArrowRight') {
-            showImage(currentIndex + 1);
-        }
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+        if (e.key === 'ArrowRight') showImage(currentIndex + 1);
     });
 
+    // DEBUG: logs para confirmar elementos (remova depois)
+    // console.log({ prevBtn, nextBtn, galleryItemsCount: galleryItems.length, imagesSrc });
 });
