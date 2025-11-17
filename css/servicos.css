@@ -99,21 +99,18 @@ ol {
 
 /* ESTILOS GERAIS DO BODY E MAIN */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Segoe UI", system-ui, "Roboto", "Arial", sans-serif;
     line-height: 1.6;
     background-color: #fff;
     color: #333;
 }
-
-/* (O restante dos estilos da home.css não são necessários aqui, como .hero, .faq etc.) */
 
 /* RODAPÉ */
 footer {
     background-color: #333;
     color: #fff;
     padding-top: 3rem;
-    /* Adicionado para garantir que fique abaixo de tudo */
-    width: 100%; 
+    width: 100%;
 }
 
 footer .footer-container {
@@ -312,22 +309,20 @@ footer .footer-bottom p {
 /* ESTILOS DO SERVICOS.CSS (CONTEÚDO)  */
 /* =================================== */
 
-/* Reset do Poppins - Já está no reset acima, mas garantindo a fonte */
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Segoe UI", system-ui, "Roboto", "Arial", sans-serif;
 }
 
 body {
-    /* Este background é da servicos.css */
     background: url('../file/img/anton-y-bjqTUUw2Q-unsplash.jpg')center/cover;
     backdrop-filter: blur(5px);
     background-attachment: fixed;
     overflow-x: hidden;
 }
 
-/* Remove a nav a:hover conflitante do home.css */
+
 header nav a:hover {
-    color: #FFE17B; /* Cor amarela do home.css */
+    color: #FFE17B;
     transform: translateY(-2px);
 }
 
@@ -342,23 +337,38 @@ header nav a:hover {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .card {
     width: 55%;
     padding: 30px;
-    background: rgba(255,255,255,0.85);
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 20px;
     backdrop-filter: blur(5px);
-    
+
 }
 
 @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .card h2 {
@@ -378,21 +388,28 @@ header nav a:hover {
     width: 40%;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     animation: zoomIn 1.2s ease;
-     animation: float 4s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
 }
 
 @keyframes zoomIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .img-side img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-     animation: float 3 ease-in-out infinite;
+    animation: float 3 ease-in-out infinite;
 }
 
 /* Serviços */
@@ -403,8 +420,9 @@ header nav a:hover {
     padding: 60px 5%;
     backdrop-filter: blur(6px);
 }
-.servicos h3{
-color: #6BDFA2;
+
+.servicos h3 {
+    color: #6BDFA2;
 }
 
 .servicos h2 {
@@ -414,8 +432,9 @@ color: #6BDFA2;
     margin-bottom: 50px;
     animation: fadeIn 1s ease;
 }
-.servicos p{
-color: #fff;
+
+.servicos p {
+    color: #fff;
 
 }
 
@@ -430,7 +449,7 @@ color: #fff;
     background: rgba(41, 39, 39, 0.9);
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     transition: 0.3s ease;
     transform: translateY(-8px);
 }
@@ -448,28 +467,30 @@ color: #fff;
     margin-bottom: 15px;
 }
 
-/* Adicionando responsividade do home.css que afeta o header/footer */
+
 @media (max-width: 900px) {
-    /* Isso garante que o conteúdo não fique escondido atrás do header */
+
     .section {
         flex-direction: column;
-        padding-top: 30px; /* Reduz o padding superior no mobile */
+        padding-top: 30px;
     }
 
-    /* Inverte a ordem em telas menores se necessário, começando pela 2a section */
+
     section#historia {
         flex-direction: column-reverse;
     }
 
-    .card, .img-side {
+    .card,
+    .img-side {
         width: 100%;
-        max-width: 500px; /* Limita a largura no mobile */
+        max-width: 500px;
     }
 
     .img-side {
-        animation: zoomIn 1.2s ease; /* Remove o 'float' no mobile */
+        animation: zoomIn 1.2s ease;
     }
+
     .img-side img {
-         animation: none; /* Remove o 'float' no mobile */
+        animation: none;
     }
 }

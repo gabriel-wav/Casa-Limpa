@@ -89,4 +89,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-}); // <-- FIM DO SCRIPT (Este é o único '}' de fechamento necessário)
+});

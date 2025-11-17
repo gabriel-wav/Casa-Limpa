@@ -9,7 +9,7 @@ let index = 0;
 
 // Verifica se os elementos do carrossel existem antes de adicionar eventos
 if (track && slides.length > 0 && btnLeft && btnRight && bolinhas.length > 0) {
-  
+
   function atualizarCarrossel() {
     const largura = document.querySelector(".carrossel").offsetWidth;
     track.style.transform = `translateX(-${index * largura}px)`;
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Verifica se os elementos do formulário WhatsApp existem
   if (!textarea || !botaoZap) {
     console.log('Elementos do formulário WhatsApp não encontrados.');
-    return; 
+    return;
   }
 
   botaoZap.addEventListener('click', () => {

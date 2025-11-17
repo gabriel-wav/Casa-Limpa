@@ -95,7 +95,7 @@ ol {
 
 /* ESTILOS GERAIS DO BODY E MAIN */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Segoe UI", system-ui, "Roboto", "Arial", sans-serif;
     line-height: 1.6;
     background-color: #fff;
     color: #333;
