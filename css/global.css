@@ -1,0 +1,361 @@
+/* ==========================================================================
+   CASA LIMPA - GLOBAL STYLES (RESET, HEADER, FOOTER, WHATSAPP FLOAT)
+   ========================================================================== */
+
+/* RESET BÁSICO */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* ==========================================================================
+   CABEÇALHO (HEADER)
+   ========================================================================== */
+header {
+    width: 100%;
+}
+
+#cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem 1rem;
+    background-color: #31B26A;
+    color: #fff;
+}
+
+#cabecalho .left {
+    display: flex;
+    align-items: center;
+}
+
+#cabecalho .left img {
+    width: auto;
+    height: 4.5rem;
+    max-height: 70px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+#cabecalho .left img:hover {
+    transform: scale(1.05);
+    border-color: #FFE17B;
+}
+
+#cabecalho .center {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+#cabecalho .center a {
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#cabecalho .center a:hover {
+    color: #FFE17B;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+    #cabecalho {
+        padding: 1rem 0.75rem 0.9rem;
+        gap: 0.75rem;
+    }
+
+    #cabecalho .left img {
+        max-width: 150px;
+        height: auto;
+    }
+
+    #cabecalho .center {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.45rem 0.7rem;
+        width: 100%;
+    }
+
+    #cabecalho .center a {
+        font-size: 0.8rem;
+        line-height: 1.2;
+        padding: 0.38rem 0.6rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+    #cabecalho .right {
+        gap: 0.4rem;
+    }
+
+    #cabecalho .right img {
+        width: 1.15rem;
+    }
+
+    #cabecalho .right p {
+        font-size: 0.78rem;
+    }
+}
+
+#cabecalho .right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#cabecalho .right img {
+    width: 2rem;
+    height: auto;
+}
+
+#cabecalho .right p {
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   ÍCONE FLUTUANTE WHATSAPP
+   ========================================================================== */
+.whatsapp-float {
+    position: fixed;
+    width: 3.75rem;
+    height: 3.75rem;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.875rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-out;
+}
+
+.whatsapp-float img {
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+.whatsapp-float:hover {
+    background-color: #1EAD56;
+    box-shadow: 2px 2px 14px rgba(30, 173, 86, 0.7);
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding-top: 3rem;
+    width: 100%;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 0 1.5rem;
+}
+
+.footer-agrupado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+footer .footer-left img {
+    width: 8rem;
+    height: auto;
+    margin: 0 auto 0.5rem auto;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer .footer-left p {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+footer .footer-left img:hover {
+    transform: scale(1.08);
+    filter: brightness(1.15);
+}
+
+footer .footer-center p {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    color: #f0f0f0;
+}
+
+footer .footer-center p:first-child {
+    font-family: 'Dancing Script', cursive, sans-serif;
+    font-weight: 700;
+    color: #FFD700;
+    font-size: 1.35rem;
+}
+
+footer .footer-center p a {
+    transition: color 0.3s ease;
+}
+
+footer .footer-center p a:hover {
+    color: #31B26A;
+    text-decoration: underline;
+}
+
+footer .footer-right nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+footer .footer-right nav a {
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.2s ease;
+}
+
+footer .footer-right nav a:hover {
+    text-decoration: underline;
+    color: #31B26A;
+    transform: translateX(5px);
+}
+
+footer .footer-location-bar {
+    background-color: #31B26A;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    margin-top: 2rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+footer .footer-location-bar img {
+    width: 1.2rem;
+    height: auto;
+}
+
+footer .footer-bottom {
+    background-color: #222;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    margin-top: 0;
+}
+
+footer .footer-bottom p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   DESKTOP (HEADER & FOOTER)
+   ========================================================================== */
+@media (min-width: 900px) {
+    #cabecalho {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.75rem 2rem;
+    }
+
+    #cabecalho .left a img {
+        height: 5.5rem;
+        max-height: 90px;
+        width: auto;
+    }
+
+    #cabecalho .center {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+        font-size: 1.15rem;
+        padding: 1.5rem 0;
+    }
+
+    #cabecalho .right p {
+        font-size: 1.15rem;
+    }
+
+    #cabecalho .right img {
+        width: 1.5rem;
+    }
+
+    /* FOOTER (Desktop) */
+    .footer-agrupado {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    footer .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    footer .footer-left img {
+        margin: 0 0 0.5rem 0;
+    }
+
+    footer .footer-right nav {
+        align-items: flex-start;
+    }
+}

@@ -4,7 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casa Limpa - Serviços profissionais de limpeza residencial, comercial e Airbnb em São Paulo. Deixe seu ambiente impecável.">
     <title>Home - Casa Limpa</title>
+
+    <!-- Otimização de Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS Completo e Otimizado -->
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -13,12 +21,12 @@
     <header>
         <div id="cabecalho">
             <div class="left">
-                <a href="index.html">
-                    <img src="file/img/casalimpalogo.png" alt="Logo Casa Limpa">
+                <a href="index.html" aria-label="Casa Limpa Home">
+                    <img src="file/img/casalimpalogo.webp" alt="Logo Casa Limpa" width="200" height="60" fetchpriority="high" decoding="async">
                 </a>
             </div>
 
-            <nav class="center">
+            <nav class="center" aria-label="Navegação principal">
                 <a href="index.html">Home</a>
                 <a href="view/galeria.html">Galeria</a>
                 <a href="view/servicos.html">Serviços</a>
@@ -26,7 +34,7 @@
             </nav>
 
             <div class="right">
-                <img src="file/img/point.png" id="point" alt="Point Localização">
+                <img src="file/img/point.webp" id="point" alt="Localização" width="24" height="24" decoding="async">
                 <p>São Paulo - Capital</p>
             </div>
         </div>
@@ -34,8 +42,8 @@
 
     <main>
         <a href="https://wa.me/5511980487555?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20solicitar%20uma%20di%C3%A1ria!"
-            class="whatsapp-float" target="_blank">
-            <img src="file/img/whatsapp_icon.svg" alt="Agendar pelo WhatsApp">
+            class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Agendar diária pelo WhatsApp">
+            <img src="file/img/whatsapp_icon.svg" alt="WhatsApp" width="36" height="36" decoding="async">
         </a>
 
         <section class="hero">
@@ -43,9 +51,8 @@
                 <h1>Deixe seu ambiente brilhando sem levantar um dedo!</h1>
                 <p>Profissional de confiança em São Paulo. Sua casa impecável ainda esta semana! Faxinas a partir de
                     R$199,99.</p>
-                <a href="https://wa.me/5511980487555" class="cta-button" target="_blank">Agendar pelo WhatsApp</a>
+                <a href="https://wa.me/5511980487555" class="cta-button" target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
                 <p class="social-proof">Mais de 100 clientes satisfeitos em São Paulo.</p>
-
             </div>
         </section>
 
@@ -53,7 +60,7 @@
             <h2>Escolha o tipo de limpeza ideal para o seu espaço</h2>
             <div class="cards-container">
                 <article class="card">
-                    <img src="file/img/residencial.jpg" alt="Limpeza Residencial">
+                    <img src="file/img/residencial.webp" alt="Limpeza Residencial" width="400" height="320" loading="lazy" decoding="async">
                     <div class="card-content">
                         <h3>Residencial</h3>
                         <p>Deixe seu lar impecável, livre de poeira e energias pesadas. Ideal para quem quer chegar em
@@ -61,7 +68,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img src="file/img/comercial.jpg" alt="Limpeza Comercial">
+                    <img src="file/img/comercial.webp" alt="Limpeza Comercial" width="400" height="320" loading="lazy" decoding="async">
                     <div class="card-content">
                         <h3>Comercial</h3>
                         <p>Ambientes limpos inspiram produtividade. Tenha seu comércio sempre pronto para receber
@@ -69,7 +76,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img src="file/img/airbnb.jpg" alt="Limpeza Airbnb">
+                    <img src="file/img/airbnb.webp" alt="Limpeza Airbnb" width="400" height="320" loading="lazy" decoding="async">
                     <div class="card-content">
                         <h3>Airbnb</h3>
                         <p>Check-in perfeito, avaliações cinco estrelas. Limpeza expressa e detalhista para anfitriões
@@ -80,7 +87,7 @@
         </section>
 
         <section class="about-me">
-            <img src="file/img/flavia.jpg" alt="Flávia, fundadora da Casa Limpa">
+            <img src="file/img/flavia.webp" alt="Flávia, fundadora da Casa Limpa" width="350" height="450" loading="lazy" decoding="async">
             <div class="about-content">
                 <h2>Quem sou?</h2>
                 <p>Meu nome é Flávia e ajudo famílias e empresas na capital de São Paulo a manterem seus espaços sempre
@@ -110,8 +117,7 @@
                 </article>
                 <article class="why-card">
                     <h3>Limpo e organizado</h3>
-                    <p>Da organização de um armário à limpeza completa, oferecemos serviço sob medida para cada rotina.
-                    </p>
+                    <p>Da organização de um armário à limpeza completa, oferecemos serviço sob medida para cada rotina.</p>
                 </article>
             </div>
         </section>
@@ -154,19 +160,18 @@
         <div class="footer-container">
             <div class="footer-agrupado">
                 <div class="footer-left">
-                    <img src="file/img/casalimpalogo-footer.png" alt="Logo Casa Limpa">
-                    <p>CNPJ: 52.446.173/0001-31</p>
+                    <img src="file/img/casalimpalogo-footer.webp" alt="Logo Casa Limpa" width="130" height="130" loading="lazy" decoding="async">
                 </div>
                 <div class="footer-center">
                     <p>Seu ambiente, nossa missão.</p>
                     <p><a href="mailto:cslimpa.organizada@gmail.com">📧 cslimpa.organizada@gmail.com</a></p>
                     <p><a href="https://wa.me/5511980487555?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20solicitar%20uma%20di%C3%A1ria!"
-                            target="_blank">📞 11 98048-7555</a></p>
+                            target="_blank" rel="noopener noreferrer">📞 11 98048-7555</a></p>
                     <p>🕘 08h até 18h</p>
                 </div>
             </div>
             <div class="footer-right">
-                <nav>
+                <nav aria-label="Links do rodapé">
                     <a href="index.html">Home</a>
                     <a href="view/galeria.html">Galeria</a>
                     <a href="view/servicos.html">Serviços</a>
@@ -175,7 +180,7 @@
             </div>
         </div>
         <div class="footer-location-bar">
-            <img src="file/img/point.png" alt="Localização">
+            <img src="file/img/point.webp" alt="Localização" width="20" height="20" loading="lazy" decoding="async">
             <span>Atende São Paulo - Capital</span>
         </div>
         <div class="footer-bottom">

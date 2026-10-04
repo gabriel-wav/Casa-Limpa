@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Limpa - Galeria</title>
+    <meta name="description" content="Confira os resultados dos serviços da Casa Limpa: fotos de antes e depois de limpezas residenciais e comerciais.">
+    <title>Galeria - Casa Limpa</title>
 
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/galeria.css">
-
+    <!-- Otimização de Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS Completo e Otimizado -->
+    <link rel="stylesheet" href="../css/galeria.css">
+
+    <!-- Script com defer -->
+    <script src="../js/galeria.js" defer></script>
 </head>
 
 <body>
@@ -19,136 +24,124 @@
     <header>
         <div id="cabecalho">
             <div class="left">
-                <a href="../index.html">
-                    <img src="../file/img/casalimpalogo.png" alt="Logo Casa Limpa">
+                <a href="../index.html" aria-label="Casa Limpa Home">
+                    <img src="../file/img/casalimpalogo.webp" alt="Logo Casa Limpa" width="200" height="60" fetchpriority="high" decoding="async">
                 </a>
             </div>
-            <nav class="center">
+            <nav class="center" aria-label="Navegação principal">
                 <a href="../index.html">Home</a>
                 <a href="galeria.html">Galeria</a>
                 <a href="servicos.html">Serviços</a>
                 <a href="contato.html">Fale Conosco</a>
             </nav>
             <div class="right">
-                <img src="../file/img/point.png" id="point" alt="Point Localização">
+                <img src="../file/img/point.webp" id="point" alt="Localização" width="24" height="24" decoding="async">
                 <p>São Paulo - Capital</p>
             </div>
         </div>
     </header>
 
     <a href="https://wa.me/5511980487555?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20solicitar%20uma%20di%C3%A1ria!"
-        class="whatsapp-float" target="_blank">
-        <img src="../file/img/whatsapp_icon.svg" alt="Agendar pelo WhatsApp">
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Agendar diária pelo WhatsApp">
+        <img src="../file/img/whatsapp_icon.svg" alt="WhatsApp" width="36" height="36" decoding="async">
     </a>
 
     <main>
-        <h1 class="gallery-title">Galeria</h1>
+        <h1 class="gallery-title">Galeria de Resultados</h1>
         <div class="gallery-grid container">
             <div class="gallery-item">
-                <img src="../file/img/1.jpeg" alt="Piso limpo com mop">
+                <img src="../file/img/1.webp" alt="Piso limpo com mop" width="300" height="225" loading="lazy" decoding="async">
                 <div class="overlay">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="white" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="../file/img/2.jpeg" alt="Roupas acumuladas antes">
+                <img src="../file/img/2.webp" alt="Roupas acumuladas antes" width="300" height="225" loading="lazy" decoding="async">
                 <div class="overlay">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="white" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="../file/img/3.jpeg" alt="Roupas dobradas em mesa">
+                <img src="../file/img/3.webp" alt="Roupas dobradas em mesa" width="300" height="225" loading="lazy" decoding="async">
                 <div class="overlay">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="white" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="../file/img/4.jpeg" alt="Entrada com plantas">
+                <img src="../file/img/4.webp" alt="Entrada com plantas organizada" width="300" height="225" loading="lazy" decoding="async">
                 <div class="overlay">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="white" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="../file/img/5.jpeg" alt="Cozinha limpa">
+                <img src="../file/img/5.webp" alt="Cozinha limpa" width="300" height="225" loading="lazy" decoding="async">
                 <div class="overlay">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="white" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="../file/img/6.jpeg" alt="Escada com corrimão">
+                <img src="../file/img/6.webp" alt="Escada limpa com corrimão" width="300" height="225" loading="lazy" decoding="async">
                 <div class="overlay">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="white" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="../file/img/7.jpeg" alt="Corredor com guarda-corpo">
+                <img src="../file/img/7.webp" alt="Corredor com guarda-corpo limpo" width="300" height="225" loading="lazy" decoding="async">
                 <div class="overlay">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="white" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="../file/img/8.jpeg" alt="Quarto arrumado">
+                <img src="../file/img/8.webp" alt="Quarto arrumado" width="300" height="225" loading="lazy" decoding="async">
                 <div class="overlay">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="white" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="../file/img/9.jpeg" alt="Roupas em pilhas altas">
+                <img src="../file/img/9.webp" alt="Organização de roupas" width="300" height="225" loading="lazy" decoding="async">
                 <div class="overlay">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="white" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="../file/img/10.jpeg" alt="Closet organizado">
+                <img src="../file/img/10.webp" alt="Closet organizado" width="300" height="225" loading="lazy" decoding="async">
                 <div class="overlay">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="white" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="../file/img/11.jpeg" alt="Banheiro limpo">
+                <img src="../file/img/11.webp" alt="Banheiro limpo e higienizado" width="300" height="225" loading="lazy" decoding="async">
                 <div class="overlay">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="white" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="../file/img/12.jpeg" alt="Sala organizada">
+                <img src="../file/img/12.webp" alt="Sala organizada" width="300" height="225" loading="lazy" decoding="async">
                 <div class="overlay">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="white" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                 </div>
             </div>
@@ -159,19 +152,19 @@
         <div class="footer-container">
             <div class="footer-agrupado">
                 <div class="footer-left">
-                    <img src="../file/img/casalimpalogo-footer.png" alt="Logo Casa Limpa">
+                    <img src="../file/img/casalimpalogo-footer.webp" alt="Logo Casa Limpa" width="130" height="130" loading="lazy" decoding="async">
                     <p>CNPJ: 52.446.173/0001-31</p>
                 </div>
                 <div class="footer-center">
                     <p>Seu ambiente, nossa missão.</p>
                     <p><a href="mailto:cslimpa.organizada@gmail.com">📧 cslimpa.organizada@gmail.com</a></p>
                     <p><a href="https://wa.me/5511980487555?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20solicitar%20uma%20di%C3%A1ria!"
-                            target="_blank">📞 11 98048-7555</a></p>
+                            target="_blank" rel="noopener noreferrer">📞 11 98048-7555</a></p>
                     <p>🕘 08h até 18h</p>
                 </div>
             </div>
             <div class="footer-right">
-                <nav>
+                <nav aria-label="Links do rodapé">
                     <a href="../index.html">Home</a>
                     <a href="galeria.html">Galeria</a>
                     <a href="servicos.html">Serviços</a>
@@ -180,24 +173,21 @@
             </div>
         </div>
         <div class="footer-location-bar">
-            <img src="../file/img/point.png" alt="Localização">
-            <span>Atende São Paulo - Capital</span>
+            <img src="../file/img/point.webp" alt="Localização" width="20" height="20" loading="lazy" decoding="async">
         </div>
         <div class="footer-bottom">
             <p>Casa Limpa © 2025</p>
         </div>
     </footer>
 
-    <div class="modal" id="lightbox">
-        <span class="close">×</span>
-
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
-
+    <!-- Lightbox Modal -->
+    <div class="modal" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização de imagem expandida">
+        <span class="close" aria-label="Fechar">&times;</span>
+        <button class="prev" aria-label="Imagem anterior">&#10094;</button>
+        <button class="next" aria-label="Próxima imagem">&#10095;</button>
         <img src="" alt="Imagem ampliada" id="lightbox-img">
     </div>
 
-    <script src="../js/galeria.js"></script>
 </body>
 
 </html>

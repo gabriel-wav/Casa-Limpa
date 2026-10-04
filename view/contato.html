@@ -2,178 +2,227 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - Casa Limpa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a Casa Limpa para orçamentos e agendamentos de faxina e diárias em São Paulo via WhatsApp ou formulário online.">
+    <title>Fale Conosco - Casa Limpa</title>
 
-  <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/contato.css">
+    <!-- Otimização de Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Completo e Otimizado -->
+    <link rel="stylesheet" href="../css/contato.css">
+
+    <!-- Script com defer -->
+    <script src="../js/contato.js" defer></script>
 </head>
 
 <body>
 
-  <header>
-    <div id="cabecalho">
-      <div class="left">
-        <a href="../index.html">
-          <img src="../file/img/casalimpalogo.png" alt="Logo Casa Limpa">
-        </a>
-      </div>
-      <nav class="center">
-        <a href="../index.html">Home</a>
-        <a href="galeria.html">Galeria</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="contato.html">Fale Conosco</a>
-      </nav>
-      <div class="right">
-        <img src="../file/img/point.png" id="point" alt="Point Localização">
-        <p>São Paulo - Capital</p>
-      </div>
-    </div>
-  </header>
-
-  <a href="https://wa.me/5511980487555?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20solicitar%20uma%20di%C3%A1ria!"
-    class="whatsapp-float" target="_blank">
-    <img src="../file/img/whatsapp_icon.svg" alt="Agendar pelo WhatsApp">
-  </a>
-
-  <section class="titulo">
-    <h1>Redes Sociais</h1>
-  </section>
-
-  <div class="area-redes">
-    <a href="https://www.instagram.com/casa_limpaeorganizada/"><img class="insta-logo"
-        src="../file/img/Instagram_logo_2022.png"></a>
-  </div>
-
-  <div class="carrossel-wrapper">
-    <button class="btn-left">&#9664;</button>
-    <div class="carrossel">
-      <div class="carrossel-track">
-
-        <div class="slide">
-          <a href="https://www.instagram.com/p/ChYZOqSOZf7/" target="_blank">
-            <img src="../file/img/WhatsApp Image 2025-11-01 at 13.14.05 (1).jpeg" alt="Antes da lavanderia">
-          </a>
+    <header>
+        <div id="cabecalho">
+            <div class="left">
+                <a href="../index.html" aria-label="Casa Limpa Home">
+                    <img src="../file/img/casalimpalogo.webp" alt="Logo Casa Limpa" width="200" height="60" fetchpriority="high" decoding="async">
+                </a>
+            </div>
+            <nav class="center" aria-label="Navegação principal">
+                <a href="../index.html">Home</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="contato.html">Fale Conosco</a>
+            </nav>
+            <div class="right">
+                <img src="../file/img/point.webp" id="point" alt="Localização" width="24" height="24" decoding="async">
+                <p>São Paulo - Capital</p>
+            </div>
         </div>
+    </header>
 
-        <div class="slide">
-          <a href="https://www.instagram.com/p/ChGYXHnuEga/" target="_blank">
-            <img src="../file/img/WhatsApp Image 2025-11-01 at 13.14.05 (2).jpeg" alt="Guarda-roupa com toalhas">
-          </a>
+    <a href="https://wa.me/5511980487555?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20solicitar%20uma%20di%C3%A1ria!"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Agendar diária pelo WhatsApp">
+        <img src="../file/img/whatsapp_icon.svg" alt="WhatsApp" width="36" height="36" decoding="async">
+    </a>
+
+    <main>
+        <!-- HERO BANNER -->
+        <section class="contact-hero">
+            <div class="hero-content">
+                <h1>Fale Conosco</h1>
+                <p>Estamos prontos para atender você. Solicite um orçamento sem compromisso ou tire suas dúvidas diretamente conosco!</p>
+            </div>
+        </section>
+
+        <!-- CANAIS DE ATENDIMENTO -->
+        <section class="channels-section">
+            <div class="channels-container">
+                <div class="channel-card">
+                    <div class="icon-circle">💬</div>
+                    <h3>WhatsApp Direto</h3>
+                    <p>Atendimento ágil para tirar dúvidas, consultar datas disponíveis e solicitar orçamentos na hora.</p>
+                    <a href="https://wa.me/5511980487555?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20solicitar%20uma%20di%C3%A1ria!" target="_blank" rel="noopener noreferrer" class="card-action-btn">Chamar no WhatsApp</a>
+                </div>
+
+                <div class="channel-card">
+                    <div class="icon-circle">📞</div>
+                    <h3>Telefone e E-mail</h3>
+                    <p><strong>(11) 98048-7555</strong><br>cslimpa.organizada@gmail.com</p>
+                    <a href="mailto:cslimpa.organizada@gmail.com" class="card-action-btn">Enviar E-mail</a>
+                </div>
+
+                <div class="channel-card">
+                    <div class="icon-circle">📍</div>
+                    <h3>São Paulo - Capital</h3>
+                    <p>Atendemos toda a capital. De segunda a sábado, das 08h às 18h.</p>
+                    <a href="https://wa.me/5511980487555" target="_blank" rel="noopener noreferrer" class="card-action-btn">Consultar Bairro</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO E MENSAGEM DIRETA -->
+        <section class="contact-forms-section">
+            <h2>Solicite seu Orçamento</h2>
+            <div class="forms-grid">
+                <!-- FORMULÁRIO -->
+                <div class="form-card">
+                    <h3>✉️ Formulário de Contato</h3>
+                    <p class="form-subtitle">Preencha os campos abaixo que responderemos o mais rápido possível:</p>
+
+                    <form id="formContato" action="https://formspree.io/f/mnnlwake" method="POST">
+                        <div class="form-group">
+                            <label for="Nome">Nome Completo</label>
+                            <input type="text" name="Nome" id="Nome" placeholder="Digite seu nome completo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Bairro">Bairro / Região em São Paulo</label>
+                            <input type="text" name="Bairro" id="Bairro" placeholder="Ex: Pinheiros, Moema, Santana..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Telefone">Telefone / WhatsApp</label>
+                            <input type="tel" name="Telefone" id="Telefone" placeholder="(11) 98765-4321" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tipo de Serviço Desejado</label>
+                            <div class="checkbox-pills-container">
+                                <label class="checkbox-pill">
+                                    <input type="checkbox" name="Tipo de Limpeza" value="Residencial"> Residencial
+                                </label>
+                                <label class="checkbox-pill">
+                                    <input type="checkbox" name="Tipo de Limpeza" value="Comercial"> Comercial
+                                </label>
+                                <label class="checkbox-pill">
+                                    <input type="checkbox" name="Tipo de Limpeza" value="Airbnb"> Airbnb
+                                </label>
+                                <label class="checkbox-pill">
+                                    <input type="checkbox" name="Tipo de Limpeza" value="Organização"> Organização Geral
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Mensagem">Mensagem ou Detalhes da Limpeza</label>
+                            <textarea name="Mensagem" id="Mensagem" placeholder="Conte-nos o que você precisa (ex: tamanho do espaço, frequência, etc.)..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <!-- WHATSAPP DIRETO -->
+                <div class="zap-box-card">
+                    <div>
+                        <h3>⚡ WhatsApp Instantâneo</h3>
+                        <p>Escreva sua mensagem abaixo e clique para iniciar a conversa diretamente no WhatsApp:</p>
+
+                        <textarea id="mensagemZap" placeholder="Olá Flávia! Gostaria de um orçamento para limpeza no meu bairro..."></textarea>
+                    </div>
+
+                    <button type="button" id="btnEnviarZap" class="zap-box-btn">
+                        <img src="../file/img/whatsapp_icon.svg" alt="" width="22" height="22" aria-hidden="true">
+                        Enviar no WhatsApp
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- REDES SOCIAIS & TRABALHOS RECENTES -->
+        <section class="social-section">
+            <h2>Acompanhe Nossos Trabalhos</h2>
+
+            <a href="https://www.instagram.com/casa_limpaeorganizada/" target="_blank" rel="noopener noreferrer" class="insta-badge-link" aria-label="Acesse nosso Instagram @casa_limpaeorganizada">
+                <img src="../file/img/Instagram_logo_2022.webp" alt="Instagram" width="28" height="28" decoding="async">
+                <span>@casa_limpaeorganizada</span>
+            </a>
+
+            <div class="carrossel-wrapper">
+                <button class="btn-left" aria-label="Slide anterior">&#9664;</button>
+                <div class="carrossel">
+                    <div class="carrossel-track">
+                        <div class="slide">
+                            <a href="https://www.instagram.com/p/ChYZOqSOZf7/" target="_blank" rel="noopener noreferrer">
+                                <img src="../file/img/4.webp" alt="Organização de lavanderia" width="700" height="380" loading="lazy" decoding="async">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="https://www.instagram.com/p/ChGYXHnuEga/" target="_blank" rel="noopener noreferrer">
+                                <img src="../file/img/2.webp" alt="Guarda-roupa e toalhas organizadas" width="700" height="380" loading="lazy" decoding="async">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="https://www.instagram.com/p/ChYaZ09u2pX/" target="_blank" rel="noopener noreferrer">
+                                <img src="../file/img/6.webp" alt="Roupas dobradas impecáveis" width="700" height="380" loading="lazy" decoding="async">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-right" aria-label="Próximo slide">&#9654;</button>
+            </div>
+
+            <div class="bolinhas" aria-label="Indicadores do carrossel">
+                <div class="active"></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-agrupado">
+                <div class="footer-left">
+                    <img src="../file/img/casalimpalogo-footer.webp" alt="Logo Casa Limpa" width="130" height="130" loading="lazy" decoding="async">
+                </div>
+                <div class="footer-center">
+                    <p>Seu ambiente, nossa missão.</p>
+                    <p><a href="mailto:cslimpa.organizada@gmail.com">📧 cslimpa.organizada@gmail.com</a></p>
+                    <p><a href="https://wa.me/5511980487555?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20solicitar%20uma%20di%C3%A1ria!"
+                            target="_blank" rel="noopener noreferrer">📞 11 98048-7555</a></p>
+                    <p>🕘 08h até 18h</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <nav aria-label="Links do rodapé">
+                    <a href="../index.html">Home</a>
+                    <a href="galeria.html">Galeria</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="contato.html">Fale Conosco</a>
+                </nav>
+            </div>
         </div>
-
-        <div class="slide">
-          <a href="https://www.instagram.com/p/ChYaZ09u2pX/" target="_blank">
-            <img src="../file/img/WhatsApp Image 2025-11-01 at 13.14.05.jpeg" alt="Roupas dobradas no armário">
-          </a>
+        <div class="footer-location-bar">
+            <img src="../file/img/point.webp" alt="Localização" width="20" height="20" loading="lazy" decoding="async">
+            <span>Atende São Paulo - Capital</span>
         </div>
-
-      </div>
-    </div>
-    <button class="btn-right">&#9654;</button>
-  </div>
-  <div class="bolinhas">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
-  <section class="titulo">
-    <h1>Formulário de Contato</h1>
-  </section>
-
-  <div id="Fundo_Fundo">
-    <div id="Fundo">
-
-      <form id="formContato" action="https://formspree.io/f/mnnlwake" method="POST">
-        <div class="formulario">
-          <fieldset>
-            <label for="Nome">Nome</label>
-            <input type="text" name="Nome" id="Nome" placeholder="Escreva seu Nome Aqui" required>
-          </fieldset>
-
-          <fieldset>
-            <label for="Bairro">Bairro</label>
-            <input type="text" name="Bairro" id="Bairro" placeholder="Digite seu Bairro!" required>
-          </fieldset>
-
-          <fieldset>
-            <label for="Telefone">Telefone</label>
-            <input type="tel" name="Telefone" id="Telefone" placeholder="(11) 98765-4321" required>
-          </fieldset>
-
-          <fieldset>
-            <legend>Tipo de Limpeza</legend>
-            <label><input type="checkbox" name="Tipo de Limpeza" value="Residencial"> Residencial</label>
-            <label><input type="checkbox" name="Tipo de Limpeza" value="Comercial"> Comercial</label>
-          </fieldset>
-
-          <fieldset>
-            <label for="Mensagem">Mensagem</label>
-            <textarea name="Mensagem" id="Mensagem" placeholder="Digite sua mensagem aqui!" required></textarea>
-          </fieldset>
-
-          <button type="submit">Enviar</button>
+        <div class="footer-bottom">
+            <p>Casa Limpa © 2025</p>
         </div>
-      </form>
+    </footer>
 
-    </div>
-  </div>
-
-  <section class="titulo">
-    <h1>Mensagem Direta</h1>
-  </section>
-
-  <div class="zap-container">
-    <div id="Mensagem_zap">
-      <p>Mensagem direto para zap</p>
-    </div>
-
-    <textarea id="mensagemZap" placeholder="Digite sua mensagem aqui..."></textarea>
-
-    <button type="button" id="btnEnviarZap">Enviar no WhatsApp</button>
-  </div>
-
-  <footer>
-    <div class="footer-container">
-      <div class="footer-agrupado">
-        <div class="footer-left">
-          <img src="../file/img/casalimpalogo-footer.png" alt="Logo Casa Limpa">
-          <p>CNPJ: 52.446.173/0001-31</p>
-        </div>
-        <div class="footer-center">
-          <p>Seu ambiente, nossa missão.</p>
-          <p><a href="mailto:cslimpa.organizada@gmail.com">📧 cslimpa.organizada@gmail.com</a></p>
-          <p><a
-              href="https://wa.me/5511980487555?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20solicitar%20uma%20di%C3%A1ria!"
-              target="_blank">📞 11 98048-7555</a></p>
-          <p>🕘 08h até 18h</p>
-        </div>
-      </div>
-      <div class="footer-right">
-        <nav>
-          <a href="../index.html">Home</a>
-          <a href="galeria.html">Galeria</a>
-          <a href="servicos.html">Serviços</a>
-          <a href="contato.html">Fale Conosco</a>
-        </nav>
-      </div>
-    </div>
-    <div class="footer-location-bar">
-      <img src="../file/img/point.png" alt="Localização">
-      <span>Atende São Paulo - Capital</span>
-    </div>
-    <div class="footer-bottom">
-      <p>Casa Limpa © 2025</p>
-    </div>
-  </footer>
-
-  <script src="../js/contato.js"></script>
 </body>
 
 </html>
